@@ -21,12 +21,16 @@ App Screenshots
 
 * Map showing nearby ATMs
 * ATM Details
+
+
 <img src="https://github.com/AldrichMascarenhas/locATM/blob/master/images/lc1.png?raw=true" width="45%"></img> 
 <img src="https://github.com/AldrichMascarenhas/locATM/blob/master/images/lc2.png?raw=true" width="45%"></img>
 
 
 * ATM Dispensed Notes
 * ATM Status Update
+
+
 <img src="https://github.com/AldrichMascarenhas/locATM/blob/master/images/lc3.png?raw=true" width="45%"></img> 
 <img src="https://github.com/AldrichMascarenhas/locATM/blob/master/images/lc4.png?raw=true" width="45%"></img> 
 
