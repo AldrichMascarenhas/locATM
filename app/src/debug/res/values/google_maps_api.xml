@@ -1,0 +1,21 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=48:07:7A:F2:83:F9:F6:0D:98:E7:8B:B7:2E:5D:CA:79:A7:C3:2B:D5%3Bcom.nerdcutlet.atmfinder
+
+    You can also add your credentials to an existing key, using this line:
+    48:07:7A:F2:83:F9:F6:0D:98:E7:8B:B7:2E:5D:CA:79:A7:C3:2B:D5;com.nerdcutlet.atmfinder
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
+        AIzaSyBoe-ikQs1t15e4aMI2kaUPkmT6WmkDLFw
+    </string>
+</resources>
