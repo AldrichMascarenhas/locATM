@@ -20,18 +20,13 @@ The App was quickly hacked together in a day using the Google Maps API and Fireb
 App Screenshots 
 
 * Map showing nearby ATMs
-
-![alt text](https://github.com/AldrichMascarenhas/locATM/blob/master/images/lc1.png?raw=true)
-
 * ATM Details
+<img src="https://github.com/AldrichMascarenhas/locATM/blob/master/images/lc1.png?raw=true" width="45%"></img> 
+<img src="https://github.com/AldrichMascarenhas/locATM/blob/master/images/lc2.png?raw=true" width="45%"></img>
 
-![alt text](https://github.com/AldrichMascarenhas/locATM/blob/master/images/lc2.png?raw=true)
 
 * ATM Dispensed Notes
-
-![alt text](https://github.com/AldrichMascarenhas/locATM/blob/master/images/lc3.png?raw=true)
-
 * ATM Status Update
-
-![alt text](https://github.com/AldrichMascarenhas/locATM/blob/master/images/lc4.png?raw=true)
+<img src="https://github.com/AldrichMascarenhas/locATM/blob/master/images/lc3.png?raw=true" width="45%"></img> 
+<img src="https://github.com/AldrichMascarenhas/locATM/blob/master/images/lc4.png?raw=true" width="45%"></img> 
 
