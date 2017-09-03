@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "490806101435",
-    "firebase_url": "https://atm-finder-7e43f.firebaseio.com",
-    "project_id": "atm-finder-7e43f",
-    "storage_bucket": "atm-finder-7e43f.appspot.com"
+    "project_number": "695794173052",
+    "firebase_url": "https://locatm-b8bb2.firebaseio.com",
+    "project_id": "locatm-b8bb2",
+    "storage_bucket": "locatm-b8bb2.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:490806101435:android:81e85c12a8130388",
+        "mobilesdk_app_id": "1:695794173052:android:81e85c12a8130388",
         "android_client_info": {
           "package_name": "com.nerdcutlet.atmfinder"
         }
       },
       "oauth_client": [
         {
-          "client_id": "490806101435-k42u6d0cpqaoridjkb6q64o40q19q9c0.apps.googleusercontent.com",
+          "client_id": "695794173052-tbj5ee156afnk67n1n9ektmuoc1s7g37.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.nerdcutlet.atmfinder",
-            "certificate_hash": "21CCC6F6F3E71FDDA1DECE7D6F10090B48B6388B"
+            "certificate_hash": "21ccc6f6f3e71fdda1dece7d6f10090b48b6388b"
           }
         },
         {
-          "client_id": "490806101435-5632k22l18uk7s5tkcjofmdom08v5u4r.apps.googleusercontent.com",
+          "client_id": "695794173052-1u8k5e1iee711i1i8bk2tuhcinruu27o.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA_RUojEjgitq1Ezif-4urUtaL2CFJGyIg"
+          "current_key": "AIzaSyBliRY-57j-a-t1z3nvCeeANi8UITTp4kY"
         }
       ],
       "services": {
@@ -40,7 +40,51 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "490806101435-5632k22l18uk7s5tkcjofmdom08v5u4r.apps.googleusercontent.com",
+              "client_id": "695794173052-1u8k5e1iee711i1i8bk2tuhcinruu27o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:695794173052:android:651c053bd4a6dfd5",
+        "android_client_info": {
+          "package_name": "com.nerdcutlet.atmfinder.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "695794173052-sieqaqdlqrpgjonh30arfuhbdb9autam.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nerdcutlet.atmfinder.debug",
+            "certificate_hash": "48077af283f9f60d98e78bb72e5dca79a7c32bd5"
+          }
+        },
+        {
+          "client_id": "695794173052-1u8k5e1iee711i1i8bk2tuhcinruu27o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBliRY-57j-a-t1z3nvCeeANi8UITTp4kY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "695794173052-1u8k5e1iee711i1i8bk2tuhcinruu27o.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

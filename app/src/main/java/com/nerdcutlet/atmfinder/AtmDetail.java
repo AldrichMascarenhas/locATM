@@ -42,7 +42,7 @@ public class AtmDetail extends AppCompatActivity {
     FloatingActionButton fab1;
     FloatingActionButton fab2;
 
-    TextView tv_name, tv_vicinity, tv_id, tv_status, tv_date;
+    TextView tv_name, tv_vicinity, tv_status, tv_date;
 
     DatabaseReference AtmIDReference;
     String STATUS, DATE_TIME;
@@ -96,7 +96,8 @@ public class AtmDetail extends AppCompatActivity {
 
         tv_name = (TextView) findViewById(R.id.tv_name);
         tv_vicinity = (TextView) findViewById(R.id.tv_vicinity);
-        tv_id = (TextView) findViewById(R.id.tv_id);
+
+
         tv_status = (TextView) findViewById(R.id.tv_status);
         tv_date = (TextView) findViewById(R.id.tv_date);
 
@@ -104,7 +105,6 @@ public class AtmDetail extends AppCompatActivity {
 
         tv_name.setText(EXTRA_ATM_NAME);
         tv_vicinity.setText(EXTRA_ATM_VICINITY);
-        tv_id.setText(EXTRA_ATM_PLACEID);
 
 
 

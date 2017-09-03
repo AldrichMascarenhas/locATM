@@ -263,34 +263,34 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     @Override
     public void processFinish(String nextpage, double lat, double lon, String rad) {
-        if (nextpage == null || nextpage == "") {
-            //Dont call again
-        }else{
-            Log.d(LOG_TAG, "processFinish !");
-
-            final AsyncHttpTask task = new AsyncHttpTask();
-            //this to set delegate/listener back to this class
-            task.delegate = this;
-            final Object[] toPass = new Object[5];
-            toPass[0] = mMap;
-            toPass[1] = lat;
-            toPass[2] = lon;
-            toPass[3] = rad;
-            toPass[4] = nextpage;
-
-            // Execute some code after 5 seconds have passed
-            Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-
-                    task.execute(toPass);                }
-            }, 5000);
-
-
-
-
-        }
+//        if (nextpage == null || nextpage == "") {
+//            //Dont call again
+//        }else{
+//            Log.d(LOG_TAG, "processFinish !");
+//
+//            final AsyncHttpTask task = new AsyncHttpTask();
+//            //this to set delegate/listener back to this class
+//            task.delegate = this;
+//            final Object[] toPass = new Object[5];
+//            toPass[0] = mMap;
+//            toPass[1] = lat;
+//            toPass[2] = lon;
+//            toPass[3] = rad;
+//            toPass[4] = nextpage;
+//
+//            // Execute some code after 5 seconds have passed
+//            Handler handler = new Handler();
+//            handler.postDelayed(new Runnable() {
+//                @Override
+//                public void run() {
+//
+//                    task.execute(toPass);                }
+//            }, 5000);
+//
+//
+//
+//
+//        }
     }
 
 

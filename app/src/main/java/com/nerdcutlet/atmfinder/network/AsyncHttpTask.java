@@ -123,7 +123,7 @@ public class AsyncHttpTask extends AsyncTask<Object, Integer, Void> {
 
         }
 
-        delegate.processFinish(m.getNextPageToken(), lat, lon, rad);
+//        delegate.processFinish(m.getNextPageToken(), lat, lon, rad);
 
 
     }

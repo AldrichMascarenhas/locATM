@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ATMFinder.iml" filepath="$PROJECT_DIR$/ATMFinder.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/locATM.iml" filepath="$PROJECT_DIR$/locATM.iml" />
     </modules>
   </component>
 </project>
