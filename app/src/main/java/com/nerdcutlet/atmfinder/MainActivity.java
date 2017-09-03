@@ -28,6 +28,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
+import jonathanfinerty.once.Once;
+
 public class MainActivity extends AppCompatActivity implements
         GoogleApiClient.OnConnectionFailedListener,
         View.OnClickListener {
@@ -46,14 +48,20 @@ public class MainActivity extends AppCompatActivity implements
 
     private GoogleApiClient mGoogleApiClient;
 
+    String showAcceptDialog = "showAcceptDialog";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        if (!Once.beenDone(Once.THIS_APP_INSTALL, showAcceptDialog)) {
 
-        showBasicIcon();
+            showBasicIcon();
+
+            Once.markDone(showAcceptDialog);
+        }
+
 
         // Button listeners
         findViewById(R.id.sign_in_button).setOnClickListener(this);
@@ -180,15 +188,16 @@ public class MainActivity extends AppCompatActivity implements
         if (user != null) {
 
             Intent i = new Intent(MainActivity.this, MapsActivity.class);
+            finish();
             startActivity(i);
 
 
-            Log.d(LOG_TAG, "Email : " +  user.getEmail());
-            Log.d(LOG_TAG, "UID : " +  user.getUid());
+            Log.d(LOG_TAG, "Email : " + user.getEmail());
+            Log.d(LOG_TAG, "UID : " + user.getUid());
 
 
             //findViewById(R.id.sign_in_button).setVisibility(View.GONE);
-           // findViewById(R.id.sign_out_and_disconnect).setVisibility(View.VISIBLE);
+            // findViewById(R.id.sign_out_and_disconnect).setVisibility(View.VISIBLE);
         } else {
             Log.d(LOG_TAG, "Null");
 

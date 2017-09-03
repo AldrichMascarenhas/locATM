@@ -23,7 +23,6 @@ import retrofit2.Response;
  */
 
 public class AsyncHttpTask extends AsyncTask<Object, Integer, Void> {
-    public AsyncResponse delegate = null;
 
     GoogleMap googleMap;
     public static final String LOG_TAG = "AsyncHttpTask";
@@ -123,7 +122,6 @@ public class AsyncHttpTask extends AsyncTask<Object, Integer, Void> {
 
         }
 
-//        delegate.processFinish(m.getNextPageToken(), lat, lon, rad);
 
 
     }

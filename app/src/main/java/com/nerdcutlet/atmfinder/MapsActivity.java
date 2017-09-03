@@ -1,5 +1,6 @@
 package com.nerdcutlet.atmfinder;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -8,7 +9,9 @@ import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -39,8 +42,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         GoogleMap.OnInfoWindowClickListener,
         GoogleMap.OnMyLocationButtonClickListener,
         View.OnClickListener,
-        com.google.android.gms.location.LocationListener,
-        AsyncResponse {
+        com.google.android.gms.location.LocationListener {
 
     private static final String LOG_TAG = "MapsActivity";
 
@@ -183,6 +185,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     }
 
+
     @Override
     public void onConnectionSuspended(int i) {
 
@@ -201,9 +204,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
 
-
-
-
     //Location Listeners
 
 
@@ -219,7 +219,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         CameraUpdate yourLocation = CameraUpdateFactory.newLatLngZoom(latLng, 15);
         mMap.animateCamera(yourLocation);
-
 
 
         LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);  //https://stackoverflow.com/questions/28436317/remove-location-updates-issue-location-class-separate-from-where-it-is-used-ca
@@ -250,7 +249,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         AsyncHttpTask task = new AsyncHttpTask();
         //this to set delegate/listener back to this class
-        task.delegate = this;
         Object[] toPass = new Object[5];
         toPass[0] = mMap;
         toPass[1] = latitude;
@@ -261,38 +259,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     }
 
-    @Override
-    public void processFinish(String nextpage, double lat, double lon, String rad) {
-//        if (nextpage == null || nextpage == "") {
-//            //Dont call again
-//        }else{
-//            Log.d(LOG_TAG, "processFinish !");
-//
-//            final AsyncHttpTask task = new AsyncHttpTask();
-//            //this to set delegate/listener back to this class
-//            task.delegate = this;
-//            final Object[] toPass = new Object[5];
-//            toPass[0] = mMap;
-//            toPass[1] = lat;
-//            toPass[2] = lon;
-//            toPass[3] = rad;
-//            toPass[4] = nextpage;
-//
-//            // Execute some code after 5 seconds have passed
-//            Handler handler = new Handler();
-//            handler.postDelayed(new Runnable() {
-//                @Override
-//                public void run() {
-//
-//                    task.execute(toPass);                }
-//            }, 5000);
-//
-//
-//
-//
-//        }
-    }
-
 
     @Override
     public void onInfoWindowClick(Marker marker) {
@@ -301,10 +267,40 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         Intent intent = new Intent(getApplicationContext(), AtmDetail.class);
 
         intent.putExtra("EXTRA_ATM_NAME", mapData.getName());
-        intent.putExtra("EXTRA_ATM_VICINITY",mapData.getVicinity() );
-        intent.putExtra("EXTRA_ATM_PLACEID",mapData.getPlace_id() );
+        intent.putExtra("EXTRA_ATM_VICINITY", mapData.getVicinity());
+        intent.putExtra("EXTRA_ATM_PLACEID", mapData.getPlace_id());
 
         startActivity(intent);
+
+    }
+
+
+
+
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setTitle("Closing Activity")
+                .setMessage("Are you sure you want to Exit?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+                        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                        ft.remove(mapFragment);
+                        ft.commit();
+
+
+                        MapsActivity.super.onBackPressed();
+                    }
+
+                })
+                .setNegativeButton("No", null)
+                .show();
+
+
+
 
     }
 }
